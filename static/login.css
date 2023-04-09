@@ -1,0 +1,106 @@
+
+.login{
+    
+    border:5px solid  #030134;
+    border-radius: 15px;
+    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif; 
+    background-color: #4b4d621a;
+    width:30em;
+    height:30em;
+    margin: auto;
+    margin-top:6%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+}
+.heading{
+    color:aliceblue;
+    font-size: 40px;
+    text-align: center;
+    
+}
+body{
+    position: absolute;
+    top:0px;
+    left:0px;
+    background-image:url('./images/background-p2.jpg');
+    height:100vh;
+    width:100vw;
+    margin:0px;
+    padding:0px;    
+}
+body::before{
+    content: "";
+    position: absolute;
+    top:0px;
+    left:0px;
+    display:block;
+    background-image: url('./images/background-p2.jpg');
+    height: 100vh;
+    width: 100vw;
+    background-size: 100%;
+    
+    z-index:-1;
+
+}
+
+.login form{
+    display:block;
+    margin:auto;
+}
+.login label{
+    color:white;
+    font-size:20px;
+}
+.login input{
+    background: transparent;
+    border:transparent;
+    border-bottom: 3px solid black;
+    padding-left:25px;
+    height:2.3em;
+    margin-left:5px;
+    color:white;
+}
+.containusername{
+    display:flex;
+}
+.containpassword{
+    display:flex;
+}
+.labelusername{
+    
+    height:2.3em;
+    width:2.3em;
+    background-image: url("./images/email.png");
+    background-size: 100%;
+
+}
+.labelpassword{
+
+    height:2.3em;
+    width:2.3em;
+    background-image: url("./images/padlock.png");
+    background-size: 100%;
+}
+
+.submit input{
+    background: transparent; 
+    display:block;
+    margin: auto;
+    height: 3em;
+    width: 8em;
+    background-color:black;
+    border-radius: 4px;
+    padding-left: 0px;
+    font-size: 10px;
+
+    color:white;
+}
+
+.createaccount a{
+    text-decoration: none;
+    color:white;
+    text-shadow: 1px 1px black;
+}

@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Document
+    link(rel='stylesheet', href='../static/login.css')
+  body
+    .login
+      p.heading LOGIN
+      form.login_form#login_form(method='POST', action='/home')
+        .containusername
+          .labelusername
+          input#username(type='text',name="usernamename", placeholder='enter username')
+          br
+          br
+        .containpassword
+          .labelpassword
+          input#password(type='password',name='password', placeholder='enter password')
+          br
+          br
+        .submit
+          input(type='submit', name='submit',value='Submit')
+        .createaccount
+          a(href='') Dont have an account? Create one
+    script(src='../static/home.js')

@@ -1,0 +1,416 @@
+*{
+    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif; 
+}
+body::before{
+    position:absolute;
+    top:0px;
+    left:0px;
+    content:"";
+    background-image: url("static/images/purple_background\ img.jpg");
+    background-size:100%;
+    height:100vh;
+    width:100vw;
+    z-index: -1;
+
+}
+
+.nav{
+    display: flex;
+    flex-direction: row-reverse;
+    border:2px solid red;
+    height: 4em;
+    width: 95em;
+   
+}
+.profilecontainer{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border:2px solid green;
+    border-radius: 50px;
+    height:96%;
+    width:40%;
+    transition: height 1s;
+}
+.welcomemessage{
+    display:flex;
+    align-items: center;
+    height:2em;
+    width:11em;
+    border:2px solid green;
+    margin: auto;
+    color:white;
+    font-size:25px;
+}
+.welcomemessage p{
+    margin: auto;
+
+}
+
+.profileimg{
+    margin:25px;
+    border:1px solid pink;
+    height:3em;
+    width:3em;
+    border-radius: 25px;
+
+}
+.menu{
+    background-image: url('static/images/icons8-circled-menu-50.png');
+    margin:25px;
+    border:1px solid pink;
+    height:3em;
+    width:3em;
+    transition: 1s;
+}
+
+.menu:hover{
+
+  
+   transform: rotate(45deg);
+       
+}
+
+
+
+
+
+.userlist{
+    position:absolute;
+    top:auto;
+    left: 63em;
+    border: 2px solid red;
+    height: 32em;
+    width: 21em;
+    margin:auto;
+    display: block;
+
+}
+.container{
+    display: flex;
+    height: 36em;
+    width: 95em;
+    border: 2px solid red;
+    align-items: center;
+
+}
+
+
+@media only screen and (max-width: 940px){
+    .container{
+        height:80em;
+        width:42em;
+    }
+    .userlist{
+        top:6em;
+        left:10em;
+        height:32em;
+        width:21em;
+    }
+    .viedo_call_space{
+        left:1em;
+        top:40em;
+        height:40em;
+        width: 40em;
+    }
+    .calling_popup{
+        top:auto;
+        left:11em;
+        height:10em;
+        width:17em;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+.user{
+    background-color:#83307c24;
+    display: flex;
+    justify-content: center;
+    margin:15px;
+    border:2px solid blue;
+    border-radius: 30px;
+    height:12%;
+}
+.users{
+    display: block;
+}
+.options{
+    border:2px solid blue;
+    width:60%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.chatroom_icon{
+    background-image: url("static/images/icons8-chat-room-90.png");
+    background-size: 95%;
+    background-repeat: no-repeat;
+    height: 90%;
+    width:20%;
+}
+.audiocall_icon{
+    background-image: url("static/images/audio_call_icon.png");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    height: 90%;
+    width:20%;
+}
+.videocall_icon{
+    background-image: url("static/images/icons8-video-call-100.png");
+    background-size: 95%;
+    background-repeat: no-repeat;
+    height: 90%;
+    width:20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+.viedo_call_space{
+    visibility:hidden;
+    position:absolute;
+    background-color: #4725492e;
+    top:auto;
+    left: 5%;
+    border: 3px solid red;
+    height:32em;
+    width: 56em;
+   
+}
+.control_buttons{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 1%;
+    left: 74%;
+    border: 2px solid black;
+    border-radius: 15px;;
+    height: 7%;
+    width: 25%;   
+}
+.mute_audio{
+    border: 1px solid blue;
+    border-radius: 15px;
+    height:95%;
+    width:20%
+}
+.mute_video{
+    border: 1px solid blue;
+    border-radius: 15px;
+    height:95%;
+    width:20%
+}
+.end_call{
+    border: 1px solid blue;
+    border-radius: 15px;
+    height:95%;
+    width:20%   
+}
+.my_viedio {
+    border: 2px solid black;
+    position: relative;
+    top: 64%;
+    left: 74%;
+    height: 26%;
+    width: 25%;
+}
+
+
+
+
+
+
+
+
+
+
+.chat_space{
+    visibility:hidden;
+    position:absolute;
+    background-color: #4725492e;
+    top:auto;
+    left: 5%;
+    border: 3px solid red;
+    height:32em;
+    width: 56em;
+}
+
+.messages{
+    border: 2px solid red;
+    width: 95%;
+    height:87%;
+    position: absolute;
+    left: 2.5%;
+    overflow-y: scroll;
+}
+
+
+.messages_left{ 
+    background-color:#443d3d2e;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    position:relative;
+    top: 3%;
+    right:1%;
+    height:10%;
+    width: fit-content;
+    border:2px solid black;
+    float: right;
+    margin-left: 80%
+}
+.messages_left>p{
+    display:inline-block;
+    margin-left:15px;
+    margin-right: 15px;
+}
+.messages_right{  
+    background-color: #443d3d2e;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    position:relative;
+    top: 3%;
+    left:1%;
+    height:10%;
+    width: fit-content;
+    border:2px solid black;
+}
+.messages_right>p{
+    display:inline-block;
+    margin-left:15px;
+    margin-right: 15px;
+}
+
+
+.type_message {
+    position: absolute;
+    top: 89%;
+    left: 2.5%;
+    height: 9%;
+    width: 95%;
+    border: 2px solid black;
+    display: block;
+    margin: auto;
+}
+.send{
+    position: relative;
+    left: 90%;
+    height:96%;
+    border: 1px solid black;
+    border-radius: 30px;
+    width:10%;
+}
+.send_message{
+    background-color: #cb4040a6;
+    border-radius: 30px;
+    height: 100%;
+    width: 100%;
+}
+.text_area{
+    position: absolute;
+    top:0%;
+    left: 12%;
+    height:96%;
+    border: 1px solid black;
+    width:76%;
+
+}
+.text_area>form{
+    padding:0px;
+    margin:0px;
+    height: 100%;
+    width: 100%;
+}
+.text_area>form>input{
+    padding: 0px;
+    margin: 0%;
+    height: 96%;
+    width: 100%;
+}
+
+
+
+.leave_room{
+    position: absolute;
+    top:0%;
+    left: 1%;
+    height:96%;
+    border: 1px solid black;
+    width:10%;
+
+}
+.leave_room_button{
+    background-color: #cb4040a6;
+}
+
+.calling_popup{
+    color: aliceblue;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top:auto;
+    left: 24em;
+    background-color: rgba(49, 21, 21, 0.684);
+    border-radius: 30px;
+    border: 2px solid red;
+    height: 10em;
+    width: 17em;
+}
+#accept_button{
+    font-weight: bold;
+    background-color: rgb(48, 241, 241);
+    border-radius: 20px;
+    height:2em;
+    width:6em;
+}
+#decline_button{
+    font-weight: bold;
+    background-color: rgb(244, 66, 57);
+    border-radius: 20px;
+    height:2em;
+    width:6em;
+}
+
+
+.calling_popup:hover{
+
+    animation-name: calling_popup_anim;
+    animation-duration: 5s;
+}
+
+
+@keyframes calling_popup_anim {
+    from{
+        height:10em;
+    }
+    to{
+        height:24em;
+    }
+    
+}
+
+
+

@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Document
+    link(rel="icon" href="data:;base64,iVBORw0KGgo=")
+    link(rel='stylesheet', href='../static/dashboard.css')
+  body
+    .main
+      .streams#streams
+          p USER1
+          video(class="player" id="user1" autoplay playsinline)
+          p USER2
+          video(class="player" id="user2" autoplay playsinline)
+      .users
+        each i in data
+          .user
+            p
+             -var x='/dashboard/';
+             -var y=i.name;
+             -var t=x+y;
+              a(id=i.name href=t value=i.name onclick="clicked(event)" ) #{i.name}
+    script(src='../static/dashboard.js')

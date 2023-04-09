@@ -1,0 +1,70 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Document
+    link(rel='stylesheet', href='../static/dashboardx.css')
+  body
+    .nav
+      .profilecontainer
+        .profile
+          .profileimg
+          .username
+            p USERNAME
+          .menu
+        .menuitems
+          a(href="/home")
+           |HOME
+          a(href="/home")
+           |ABOUT
+          a(href="/home")
+           |CONTACT US
+          a(href="/home")
+           |FRIENDS
+      .welcomemessage
+        p WELCOME USER
+    .container
+      .userlist
+        each i in data
+          .user
+            .users
+              p #{i.name}
+            .options
+              button(class="chatroom_icon" value=0 id=i.name type="button" onclick="clicked(event)")
+              button(class="audiocall_icon" value=2 id=i.name type="button" onclick="clicked(event)")
+              button(class="videocall_icon" value=1 id=i.name type="button" onclick="clicked(event)")
+      .viedio_call_space
+        video(class="player" id="user2stream" autoplay playsinline)
+        .control_buttons
+          button(class="mute_audio" value=0  type="button" onclick="mute_audio(event)")
+          button(class="mute_video" value=0  type="button" onclick="mute_video(event)")
+          button(class="end_call" value=0 type="button" onclick="end_call(event)")
+        .my_viedio
+          video(class="player" id="user1stream" autoplay playsinline)
+      .chat_space#chat_space
+        .messages
+        .type_message
+          .send
+            button.send_message(type='button' onclick="send_text(event)") SEND
+          .text_area
+            form#message_form
+              input(type='text',name="message",placeholder='enter message here')
+          .leave_room
+            button.leave_room_button(type='button' onclick="leave_room(event)") LEAVE ROOM
+      .calling_popup_chat
+        p X IS INVITING YOU TO CHAT ROOM
+        .buttons
+          button(id="accept_button" type='button' onclick="accept_call_chat(event)") ACCEPT
+          button(id="decline_button" type='button' onclick="decline_call_chat(event)") DECLINE
+      .calling_popup_viedio
+        p X IS INVITING YOU TO VIDEO CHAT
+        .buttons
+          button(id="accept_button" type='button' onclick="accept_call_viedio(event)") ACCEPT
+          button(id="decline_button" type='button' onclick="decline_call_viedio(event)") DECLINE
+      .declined_popup
+        p X DECLINED CALL
+        .buttons
+          button#accept_button(type='button' onclick="declined(event)") OK
+    script(src='../static/dashboardx.js')
